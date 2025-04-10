@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Création Entreprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--<div class="loader-container">
+        <div class="loader"></div>
+        <p>Chargement...</p>
+    </div>-->
+
+    <header>
+        <div class="logo-container">
+            <img src="Img/icon.png" alt="Logo Cabinet Comptable" class="logo">
+            <h1>Cabinet Comptable GED-BERED</h1>
+        </div>
+        <nav id="main-nav">
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-list">
+                <li><a href="#" class="active" data-section="accueil">Accueil</a></li>
+                <li><a href="#" data-section="services">Nos Services</a></li>
+                <li><a href="#" data-section="suivi">Suivi Entreprise</a></li>
+                <li><a href="#" data-section="documents">Documents</a></li>
+                <li><a href="#" data-section="contact">Contact</a></li>
+                <li class="auth-buttons">
+                    <a href="#" class="btn-login" id="login-btn">Connexion</a>
+                    <a href="index.php" class="btn-register" id="register-btn">Inscription</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil" class="section active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Bienvenue sur votre plateforme de suivi</h2>
+                    <p>Nous vous accompagnons dans toutes les étapes de la création de votre entreprise</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" id="suivre-btn">Suivre mon dossier</a>
+                        <a href="#" class="btn btn-secondary" id="creer-btn">Créer un compte</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/api/placeholder/500/300" alt="Création d'entreprise">
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-file-signature feature-icon"></i>
+                    <h3>Création simplifiée</h3>
+                    <p>Nous nous occupons de toutes les démarches administratives</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Suivi en temps réel</h3>
+                    <p>Consultez l'avancement de votre dossier à tout moment</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-pdf feature-icon"></i>
+                    <h3>Documents accessibles</h3>
+                    <p>Téléchargez et consultez tous vos documents officiels</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section id="services" class="section">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-container">
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3>Création d'entreprise</h3>
+                    <p>Accompagnement complet dans toutes les démarches de création</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Formalités juridiques</h3>
+                    <p>Rédaction et dépôt de tous les documents officiels</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-calculator"></i></div>
+                    <h3>Conseil fiscal</h3>
+                    <p>Optimisation de votre structure et de votre régime fiscal</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Accompagnement</h3>
+                    <p>Suivi personnalisé tout au long du processus</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Suivi Entreprise -->
+        <section id="suivi" class="section">
+            <h2 class="section-title">Suivi de votre dossier</h2>
+            
+            <div class="login-required hidden">
+                <i class="fas fa-lock"></i>
+                <h3>Connexion requise</h3>
+                <p>Veuillez vous connecter pour accéder au suivi de votre dossier</p>
+                <button class="btn btn-primary login-redirect">Se connecter</button>
+            </div>
+            
+            <div class="suivi-content">
+                <div class="progress-tracker">
+                    <h3>Progression de votre dossier</h3>
+                    <div class="progress-container">
+                        <div class="progress-steps">
+                            <div class="step completed">
+                                <div class="step-icon"><i class="fas fa-check"></i></div>
+                                <div class="step-label">Dépôt du dossier</div>
+                            </div>
+                            <div class="step completed">
+                                <div class="step-icon"><i class="fas fa-check"></i></div>
+                                <div class="step-label">Vérification des informations</div>
+                            </div>
+                            <div class="step active">
+                                <div class="step-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                                <div class="step-label">Traitement administratif</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon"><i class="fas fa-hourglass"></i></div>
+                                <div class="step-label">Immatriculation</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="step-label">Finalisation</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-entreprise">
+                    <h3>Informations de l'entreprise</h3>
+                    <div class="info-tabs">
+                        <div class="tab-header">
+                            <button class="tab-btn active" data-tab="info-personnelles">Informations personnelles</button>
+                            <button class="tab-btn" data-tab="info-societe">Informations société</button>
+                            <button class="tab-btn" data-tab="activite">Activité</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="info-personnelles">
+                                <div class="info-card">
+                                    <h4>Associé 1</h4>
+                                    <div class="info-grid">
+                                        <div class="info-item">
+                                            <span class="info-label">Nom:</span>
+                                            <span class="info-value">Dupont</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Prénom:</span>
+                                            <span class="info-value">Jean</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Date de naissance:</span>
+                                            <span class="info-value">15/03/1980</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Lieu de naissance:</span>
+                                            <span class="info-value">Paris</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Type de pièce:</span>
+                                            <span class="info-value">Carte d'identité</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Numéro de pièce:</span>
+                                            <span class="info-value">123456789</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Date d'établissement:</span>
+                                            <span class="info-value">01/01/2020</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Date d'expiration:</span>
+                                            <span class="info-value">01/01/2030</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Domicile:</span>
+                                            <span class="info-value">12 rue des Lilas, 75001 Paris</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Téléphone:</span>
+                                            <span class="info-value">06 12 34 56 78</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Email:</span>
+                                            <span class="info-value">jean.dupont@email.com</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Boîte postale:</span>
+                                            <span class="info-value">BP 123</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">Apport:</span>
+                                            <span class="info-value">10 000 €</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-secondary add-associate">+ Ajouter un associé</button>
+                            </div>
+                            
+                            <div class="tab-pane" id="info-societe">
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <span class="info-label">Raison sociale:</span>
+                                        <span class="info-value">Entreprise Innovante</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Nom commercial:</span>
+                                        <span class="info-value">InnoTech</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Type d'entreprise:</span>
+                                        <span class="info-value">SARL</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Capital social:</span>
+                                        <span class="info-value">15 000 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="activite">
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <span class="info-label">Activité exercée:</span>
+                                        <span class="info-value">Conseil en informatique</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Lieu d'exercice:</span>
+                                        <span class="info-value">Paris</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Date de début d'activité:</span>
+                                        <span class="info-value">01/01/2025</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Chiffre d'affaires prévisionnel:</span>
+                                        <span class="info-value">120 000 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Documents -->
+        <section id="documents" class="section">
+            <h2 class="section-title">Documents</h2>
+            
+            <div class="login-required hidden">
+                <i class="fas fa-lock"></i>
+                <h3>Connexion requise</h3>
+                <p>Veuillez vous connecter pour accéder à vos documents</p>
+                <button class="btn btn-primary login-redirect">Se connecter</button>
+            </div>
+            
+            <div class="documents-content">
+                <div class="documents-filter">
+                    <input type="text" id="doc-search" placeholder="Rechercher un document...">
+                    <select id="doc-type-filter">
+                        <option value="all">Tous les types</option>
+                        <option value="administrative">Administratif</option>
+                        <option value="juridique">Juridique</option>
+                        <option value="fiscal">Fiscal</option>
+                    </select>
+                </div>
+                
+                <div class="documents-list">
+                    <div class="document-item administrative">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>Statuts de la société</h4>
+                            <span class="document-date">Mis à jour le 15/03/2025</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="btn-view"><i class="fas fa-eye"></i></button>
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="document-item juridique">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>Extrait Kbis</h4>
+                            <span class="document-date">Mis à jour le 20/03/2025</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="btn-view"><i class="fas fa-eye"></i></button>
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="document-item fiscal">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>Attestation fiscale</h4>
+                            <span class="document-date">Mis à jour le 01/04/2025</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="btn-view"><i class="fas fa-eye"></i></button>
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="document-item administrative">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>Formulaire MO</h4>
+                            <span class="document-date">Mis à jour le 05/04/2025</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="btn-view"><i class="fas fa-eye"></i></button>
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contactez-nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>123 Avenue des Comptables, 75008 Paris</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@cabinetcomptable.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horaires</h4>
+                            <p>Lun-Ven: 9h-18h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envoyez-nous un message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <input type="text" id="sujet" name="sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modales -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-nom">Nom</label>
+                    <input type="text" id="register-nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-prenom">Prénom</label>
+                    <input type="text" id="register-prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-telephone">Téléphone</label>
+                    <input type="tel" id="register-telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="pdf-viewer-modal">
+        <div class="modal-content pdf-viewer">
+            <span class="close-modal">&times;</span>
+            <h2>Visualisation du document</h2>
+            <div class="pdf-container">
+                <img src="/api/placeholder/600/800" alt="Exemple de PDF" class="pdf-preview">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Img/icon.png" alt="Logo Cabinet Comptable" class="logo">
+                <h3>Cabinet Comptable GED BERED</h3>
+                <p>Votre partenaire pour la création d'entreprise</p>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="wwww.gedbered.com">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Tarifs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">CGU</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Restez informé de nos actualités</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email">
+                    <button type="submit" class="btn-newsletter">S'abonner</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cabinet Comptable GED-BERED. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
